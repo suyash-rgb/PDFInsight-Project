@@ -1,0 +1,410 @@
+PS C:\Users\HairWizard> cd D:\ATJOIN
+PS D:\ATJOIN> pip install PyMuPDF nltk pandas
+>> 
+Collecting PyMuPDF
+  Downloading PyMuPDF-1.24.12-cp39-abi3-win_amd64.whl.metadata (3.4 kB)
+Collecting nltk
+  Downloading nltk-3.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting pandas
+  Downloading pandas-2.2.3-cp313-cp313-win_amd64.whl.metadata (19 kB)
+Collecting click (from nltk)
+  Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting joblib (from nltk)
+  Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting regex>=2021.8.3 (from nltk)
+  Downloading regex-2024.9.11-cp313-cp313-win_amd64.whl.metadata (41 kB)
+Collecting tqdm (from nltk)
+  Downloading tqdm-4.66.5-py3-none-any.whl.metadata (57 kB)
+Collecting numpy>=1.26.0 (from pandas)
+  Downloading numpy-2.1.2-cp313-cp313-win_amd64.whl.metadata (59 kB)
+Collecting python-dateutil>=2.8.2 (from pandas)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas)
+  Downloading pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas)
+  Downloading tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+  Downloading six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting colorama (from click->nltk)
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Downloading PyMuPDF-1.24.12-cp39-abi3-win_amd64.whl (16.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.0/16.0 MB 12.1 MB/s eta 0:00:00
+Downloading nltk-3.9.1-py3-none-any.whl (1.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 18.7 MB/s eta 0:00:00
+Downloading pandas-2.2.3-cp313-cp313-win_amd64.whl (11.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.5/11.5 MB 13.1 MB/s eta 0:00:00
+Downloading numpy-2.1.2-cp313-cp313-win_amd64.whl (12.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 13.1 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2024.2-py2.py3-none-any.whl (508 kB)
+Downloading regex-2024.9.11-cp313-cp313-win_amd64.whl (273 kB)
+Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+Downloading tqdm-4.66.5-py3-none-any.whl (78 kB)
+Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Installing collected packages: pytz, tzdata, six, regex, PyMuPDF, numpy, joblib, colorama, tqdm, python-dateutil, click, pandas, nltk
+Successfully installed PyMuPDF-1.24.12 click-8.1.7 colorama-0.4.6 joblib-1.4.2 nltk-3.9.1 numpy-2.1.2 pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2024.2 regex-2024.9.11 six-1.16.0 tqdm-4.66.5 tzdata-2024.2
+PS D:\ATJOIN> python pdf_text_matcher.py
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\HairWizard\AppData\Roaming\nltk_data...
+[nltk_data]   Unzipping tokenizers\punkt.zip.
+Traceback (most recent call last):
+  File "D:\ATJOIN\pdf_text_matcher.py", line 51, in <module>
+    main('BrianMason_Using_Rest_API-2.pdf', reference_list, 'console')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ATJOIN\pdf_text_matcher.py", line 44, in main
+    tokens = tokenize_text(text)
+  File "D:\ATJOIN\pdf_text_matcher.py", line 20, in tokenize_text
+    tokens = word_tokenize(text)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError:
+**********************************************************************
+  Resource punkt_tab not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load tokenizers/punkt_tab/english/
+
+  Searched in:
+    - 'C:\\Users\\HairWizard/nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'   
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'     
+    - 'C:\\Users\\HairWizard\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+PS D:\ATJOIN> import nltk
+>> nltk.download('punkt')
+>>
+import : The term 'import' is not recognized as the name of a cmdlet, function, script file, 
+or operable program. Check the spelling of the name, or if a path was included, verify that    
+the path is correct and try again.
+At line:1 char:1
++ import nltk
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (import:String) [], CommandNotFoundException     
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+nltk.download : The term 'nltk.download' is not recognized as the name of a cmdlet, function, 
+script file, or operable program. Check the spelling of the name, or if a path was included,   
+verify that the path is correct and try again.
+At line:2 char:1
++ nltk.download('punkt')
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (nltk.download:String) [], CommandNotFoundExcep  
+   tion
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\ATJOIN> python pdf_text_matcher.py
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\HairWizard\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "D:\ATJOIN\pdf_text_matcher.py", line 51, in <module>
+    main('BrianMason_Using_Rest_API-2.pdf', reference_list, 'console')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ATJOIN\pdf_text_matcher.py", line 44, in main
+    tokens = tokenize_text(text)
+  File "D:\ATJOIN\pdf_text_matcher.py", line 20, in tokenize_text
+    tokens = word_tokenize(text)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError:
+**********************************************************************
+  Resource punkt_tab not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load tokenizers/punkt_tab/english/
+
+  Searched in:
+    - 'C:\\Users\\HairWizard/nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'   
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'     
+    - 'C:\\Users\\HairWizard\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+PS D:\ATJOIN> python pdf_text_matcher.py
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\HairWizard\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "D:\ATJOIN\pdf_text_matcher.py", line 53, in <module>
+    main('BrianMason_Using_Rest_API-2.pdf', reference_list, 'console')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ATJOIN\pdf_text_matcher.py", line 46, in main
+    tokens = tokenize_text(text)
+  File "D:\ATJOIN\pdf_text_matcher.py", line 22, in tokenize_text
+    tokens = word_tokenize(text)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError:
+**********************************************************************
+  Resource punkt_tab not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load tokenizers/punkt_tab/english/
+
+  Searched in:
+    - 'C:\\Users\\HairWizard/nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'   
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'     
+    - 'C:\\Users\\HairWizard\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Roaming\\nltk_data'
+**********************************************************************
+
+PS D:\ATJOIN> python pdf_text_matcher.py
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\HairWizard\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "D:\ATJOIN\pdf_text_matcher.py", line 53, in <module>
+    main('BrianMason_Using_Rest_API-2.pdf', reference_list, 'console')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ATJOIN\pdf_text_matcher.py", line 46, in main
+    tokens = tokenize_text(text)
+  File "D:\ATJOIN\pdf_text_matcher.py", line 22, in tokenize_text
+    tokens = word_tokenize(text)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError:
+**********************************************************************
+  Resource punkt_tab not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load tokenizers/punkt_tab/english/
+
+  Searched in:
+    - 'C:\\Users\\HairWizard/nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'   
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'     
+    - 'C:\\Users\\HairWizard\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Roaming\\nltk_data'
+**********************************************************************
+
+PS D:\ATJOIN> python pdf_text_matcher.py
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\HairWizard\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "D:\ATJOIN\pdf_text_matcher.py", line 52, in <module>
+    main('BrianMason_Using_Rest_API-2.pdf', reference_list, 'console')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ATJOIN\pdf_text_matcher.py", line 45, in main
+    tokens = tokenize_text(text)
+  File "D:\ATJOIN\pdf_text_matcher.py", line 21, in tokenize_text
+    tokens = word_tokenize(text)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError:
+**********************************************************************
+  Resource punkt_tab not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load tokenizers/punkt_tab/english/
+
+  Searched in:
+    - 'C:\\Users\\HairWizard/nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+PS D:\ATJOIN> python pdf_text_matcher.py
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\HairWizard\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "D:\ATJOIN\pdf_text_matcher.py", line 52, in <module>        
+    main('BrianMason_Using_Rest_API-2.pdf', reference_list, 'console')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ATJOIN\pdf_text_matcher.py", line 45, in main
+    tokens = tokenize_text(text)
+  File "D:\ATJOIN\pdf_text_matcher.py", line 21, in tokenize_text   
+    tokens = word_tokenize(text)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__   
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang  
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError:
+**********************************************************************
+  Resource punkt_tab not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load tokenizers/punkt_tab/english/
+
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+PS D:\ATJOIN> python pdf_text_matcher.py
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\HairWizard\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "D:\ATJOIN\pdf_text_matcher.py", line 52, in <module>
+    main('BrianMason_Using_Rest_API-2.pdf', reference_list, 'console')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ATJOIN\pdf_text_matcher.py", line 45, in main
+    tokens = tokenize_text(text)
+  File "D:\ATJOIN\pdf_text_matcher.py", line 21, in tokenize_text
+    tokens = word_tokenize(text)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\HairWizard\AppData\Local\Programs\Python\Python313\Lib\site-packages\nltk\data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError:
+**********************************************************************
+  Resource punkt_tab not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load tokenizers/punkt_tab/english/
+
+  Searched in:
+    - 'C:\\Users\\HairWizard/nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\share\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Local\\Programs\\Python\\Python313\\lib\\nltk_data'
+    - 'C:\\Users\\HairWizard\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
