@@ -1,0 +1,2 @@
+# PDFInsight-Project
+ PDFInsight is a robust tool designed to revolutionize the way you handle PDF documents. Whether you're a recruiter sifting through resumes, a researcher analyzing academic papers, or a business professional managing a plethora of documents, PDFInsight helps you find and organize crucial information with ease. By leveraging advanced text matching and clustering algorithms, PDFInsight ensures that you never miss out on important details and can focus on what truly matters.
