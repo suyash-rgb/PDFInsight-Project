@@ -1,0 +1,15 @@
+# Fastapi
+fastapi
+uvicorn[standard]
+
+# Document Parsing
+pypdf
+
+# Embeddings & Vector DB
+fastembed
+zvec
+
+# LLM Inference
+transformers
+torch
+accelerate
